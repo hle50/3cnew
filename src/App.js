@@ -19,23 +19,25 @@ import ProvideFeedback from './pages/ProvideFeedback';
 function App() {
     return (
         <AppState>
-            <div className="App h-100">
-                <Header/>
-                <div id='wrapper' className='h-100 d-flex'>
-                    <AppSidebar/>
-                    <div className='w-100'>
-                        <Breadcrumb/>
-                        <div>
-                            <Router>
+            <Router>
+
+                <div className="App h-100">
+                    <Header/>
+                    <div id='wrapper' className='h-100 d-flex'>
+                        <AppSidebar/>
+                        <div className='w-100'>
+                            <Breadcrumb/>
+                            <div className="mt-3">
                                 <Switch>
                                     <Route exact path="/" component={Home}/>
-
+                                    <Route path="/make-an-inquiry" component={MakeInquiry}/>
                                 </Switch>
-                            </Router>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Router>
+
         </AppState>
     );
 }

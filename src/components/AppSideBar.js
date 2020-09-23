@@ -6,6 +6,8 @@ import LodgeAComplaintIcon from './icons/LodgeAComplaintIcon';
 import MakeAnInquiryIcon from './icons/MakeAnInquiryIcon';
 import MyMattersIcon from './icons/MyMattersIcon';
 import ProvideFeedbackIcon from './icons/ProvideFeedbackIcon';
+import {Link, BrowserRouter as Router,} from "react-router-dom";
+
 const Components = {
     HomeIcon: HomeIcon,
     LodgeAComplaintIcon: LodgeAComplaintIcon,
@@ -14,10 +16,9 @@ const Components = {
     ProvideFeedbackIcon: ProvideFeedbackIcon,
 };
 
-const Logo =  block => {
+const Logo = block => {
     if (typeof Components[block] !== "undefined") {
-        return React.createElement(Components[block], {
-        });
+        return React.createElement(Components[block], {});
     }
 };
 
@@ -31,16 +32,19 @@ const AppSidebar = () => {
              id="sidebar-wrapper">
             <div className="list-group list-group-flush">
                 {Object.keys(data).map((key, index) => {
-
                     return (
-                        <a key={data[key].text} href={data[key].link}
-                           className="list-group-item list-group-item-action bg-light">
+                        <Link className="list-group-item list-group-item-action bg-light" key={key}
+                              to={data[key].link}>
                             {Logo(data[key].icon)}
                             {data[key].text}
-                        </a>
+                        </Link>
+                        // <a key={data[key].text} href={data[key].link}
+                        //    className="list-group-item list-group-item-action bg-light">
+                        //     {Logo(data[key].icon)}
+                        //     {data[key].text}
+                        // </a>
                     )
                 })
-
                 }
             </div>
         </div>

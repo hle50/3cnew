@@ -1,53 +1,109 @@
 import React from 'react';
 import homeBanner from '../assets/images/home_banner.png';
+import lodgeComplaint from '../assets/images/lodgeComplaint.png';
+import makeInquiry from '../assets/images/makeInquiry.png';
+import myMatters from '../assets/images/myMatters.png';
+import provideFeedback from '../assets/images/provideFeedback.png';
 
 const Home = () => {
     return (
         <div className="container-fluid">
             <div className='row'>
                 <div className="col-sm-12 col-md-8">
-                    <img src={homeBanner} className="img-fluid" alt="homeBanner"/>
-                    <h3>What would you like to do?</h3>
-                    <div className="row col-12">
-                      <div className='col-sm-12 col-md-6 col-lg-3 shadow bg-white rounded'>
-                          <svg
-                              width="96"
-                              height="96"
-                              viewBox="0 0 96 96"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                          >
-                              <path
-                                  d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H15.9595C16.5118 13 16.9595 12.5523 16.9595 12C16.9595 11.4477 16.5118 11 15.9595 11H8Z"
-                                  fill="currentColor"
-                              />
-                              <path
-                                  d="M8.04053 15.0665C7.48824 15.0665 7.04053 15.5142 7.04053 16.0665C7.04053 16.6188 7.48824 17.0665 8.04053 17.0665H16C16.5523 17.0665 17 16.6188 17 16.0665C17 15.5142 16.5523 15.0665 16 15.0665H8.04053Z"
-                                  fill="currentColor"
-                              />
-                              <path
-                                  fill-rule="evenodd"
-                                  clip-rule="evenodd"
-                                  d="M5 3C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5ZM7 5H5L5 19H19V5H17V6C17 7.65685 15.6569 9 14 9H10C8.34315 9 7 7.65685 7 6V5ZM9 5V6C9 6.55228 9.44772 7 10 7H14C14.5523 7 15 6.55228 15 6V5H9Z"
-                                  fill="currentColor"
-                              />
-                          </svg>
-                      </div> <div className='col-sm-12 col-md-6 col-lg-3'>
-                          card2
-                      </div> <div className='col-sm-12 col-md-6 col-lg-3'>
-                          card3
-                      </div>
-                        <div className='col-sm-12 col-md-6 col-lg-3'>
-                            card4
+
+                    <img src={homeBanner} className="w-100" alt="homeBanner"/>
+                    <div className="separator mt-3 mb-3"><h3>What would you like to do?</h3></div>
+                    <div className="row">
+                        <div className="col-sm-12 col-md-6 col-lg-3">
+                            <div style={cardStyle} className="card text-center">
+                                <img className="m-auto" width={64} src={lodgeComplaint} alt='lodgeComplaint'/>
+                                <div style={iCardBody}>
+                                    <h5 className="card-title">Lodge a Complaint</h5>
+                                    <p className="card-text">Find out how to make a complaint</p>
+                                    <div>
+                                        <a href="#" className="btn btn-primary">CLICK HERE</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-12 col-md-6 col-lg-3">
+                            <div style={cardStyle} className="card text-center">
+                                <img className="m-auto" width={64} src={makeInquiry} alt='makeInquiry'/>
+                                <div style={iCardBody}>
+                                    <h5 className="card-title">Make an Inquiry</h5>
+                                    <p className="card-text">Need to know anything just drop us a note</p>
+                                    <a href="#" className="btn btn-primary">CLICK HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-12 col-md-6 col-lg-3">
+                            <div style={cardStyle} className="card text-center">
+                                <img className="m-auto" width={64} src={myMatters} alt='myMatters'/>
+                                <div style={iCardBody}>
+                                    <h5 className="card-title">My Matters</h5>
+                                    <p className="card-text">Check the status of your matters</p>
+                                    <a href="#" className="btn btn-primary">CLICK HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-12 col-md-6 col-lg-3">
+                            <div style={cardStyle} className="card text-center">
+                                <img className="m-auto" width={64} src={provideFeedback} alt='provideFeedback'/>
+                                <div style={iCardBody}>
+                                    <h5 className="card-title">Provide Feedback</h5>
+                                    <p className="card-text">Have your say/give us feedback</p>
+                                    <a href="#" className="btn btn-primary">CLICK HERE</a>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
-
                 </div>
 
 
+                <div className="col-md-4">
+                    <div className="col-12">
 
-                <div className="col-sm-12 col-md-4">
+                        <div className="card">
+                            <div className="card-body">
+                                <button type="button" className="btn btn-info btn-lg btn-block">LOGIN</button>
+                                <button type="button" className="btn btn-primary btn-lg btn-block">NEW USER REGISTER
+                                </button>
+                            </div>
+                        </div>
+                        <br/>
+                        <div className="card">
+                            <div className="card-body">
+                              <span className="font-weight-bold">
+                                  Are you a registered health practitioner, employer or education provider?
+                              </span>
+                                <p>If so, in determining where to make your complaint you will need to consider whether
+                                    you have a legal obligation to make a mandatory notification, in accordance with
+                                    Division 2 of the Health Practitioner Regulation National Law (NSW).</p>
+                                <p>
+                                    <a target="_blank"
+                                       href="http://www.hccc.nsw.gov.au/Information/Information-For-Health-Providers/Mandatory-reporting---What-Practitioners-need-to-know-/default.aspx"> Mandatory
+                                        notifications </a> <span className="font-weight-bold">must</span> be made to the
+                                    National Agency (AHPRA). Upon receiving the notification AHPRA would then refer that
+                                    notification to the HCCC and/or the relevant Professional Council for management as
+                                    a complaint. Making a complaint to the Commission only, does not satisfy mandatory
+                                    reporting requirements.
+                                </p>
+                                <p className="font-italic">
+                                    You may also wish to make a complaint to the Commission in addition to notifying
+                                    AHPRA. This may avoid any delay in the Commission receiving and assessing your
+                                    complaint.
+                                </p>
+                                <p>
+                                    If your complaint is not a mandatory notification within the meaning of the National
+                                    law, it can be made directly to the Commission via this portal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
 
@@ -56,3 +112,13 @@ const Home = () => {
     )
 }
 export default Home;
+const cardStyle = {
+    minHeight: '350px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    paddingTop: '20px',
+}
+const iCardBody = {
+    minHeight: '1px',
+    padding: '1.25rem'
+}

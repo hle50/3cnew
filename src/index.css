@@ -1,5 +1,6 @@
 html,body,#root{
   height: 100%;
+  font-family: 'Titillium Web', sans-serif;
 }
 body {
   background-color: rgb(236,236,236);
